@@ -1,9 +1,10 @@
-import { InputContainer } from "./styles";
+import { InputContainer, ErrorMessage } from "./styles";
 import { IInputProps } from "././types";
 import { Controller } from "react-hook-form";
 
-const Input = ({ control, name, ...rest }: IInputProps) => {
+const Input = ({ control, name, errorMessage, ...rest }: IInputProps) => {
   return (
+  	<>
 		<InputContainer>
 			<Controller
 				control={control}
@@ -19,6 +20,8 @@ const Input = ({ control, name, ...rest }: IInputProps) => {
 				)}
 			/>
 		</InputContainer>
+		{ errorMessage ? <ErrorMessage>{ errorMessage }</ErrorMessage> : null }
+	</>
   );
 };
 

@@ -1,6 +1,8 @@
 import { Control } from "react-hook-form";
+import { IFormLogin } from "../../pages/Login/types";
 
 export interface IInputProps extends React.InputHTMLAttributes<HTMLInputElement> {
-    control: Control<any, any>
-    name: string;
-}
+    control: Control<IFormLogin, any>
+    name: "email" | "password";
+    errorMessage?: string;
+};
