@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 
-
 export const ButtonContainer = styled.button`
     width: 100%;
     height: 42px;
@@ -9,6 +8,13 @@ export const ButtonContainer = styled.button`
 
     border: 1px solid #81259D;
     border-radius: 21px;
+    cursor: pointer; 
+
+    &:disabled {
+        cursor: not-allowed;
+        background-color: #56475a;
+        border: 1px solid #97829e;
+    }
 
     &:hover {
         opacity: 0.6;
